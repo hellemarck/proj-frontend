@@ -15,17 +15,24 @@ import React from 'react';
 //     }
 // }
 
+// Arapey
+// Oswald
+// Prata
+// Vidaloka
+// Lobster
+// Poiret One
+
 const Header = () => {
     return React.createElement(
         'header',
         {className: 'App-header'},
-        React.createElement('p', {style: {fontStyle:'italic'}}, 'Invest in retro posters'),
+        React.createElement('p', {style: {fontSize:'36px', fontFamily:'Poiret One'}}, 'INVEST IN RETRO POSTERS'),
         React.createElement('img', {
             className: 'App-logo',
-            src: require('./img/me.jpg'),
+            src: require('./img/poster4.jpg'),
             alt: 'mette'
         }),
-        React.createElement('p', null, 'POSTER | BANK')
+        React.createElement('p', {style: {fontSize:'36px', fontFamily:'Lobster'}}, 'the POSTER | BANK')
     )
 }
 

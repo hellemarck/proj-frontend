@@ -15,6 +15,8 @@ import Header from './components/Header';
 import Register from './components/Register';
 import Login from './components/Login';
 import Chat from './components/Chat';
+import Posters from './components/Posters';
+
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
           <ul>
             <li>
               <Link to="/">> hem</Link>
+            </li>
+            <li>
+              <Link to="/posters">> posters</Link>
             </li>
             <li>
               <Link to="/login">> logga in/ut</Link>
@@ -44,6 +49,7 @@ function App() {
               <Header />
               <Home />
           </Route>
+          <Route exact strict path="/posters" component={Posters}/>
           <Route exact strict path="/login" component={Login}/>
           <Route exact strict path="/register" component={Register}/>
           <Route exact strict path="/chat" component={Chat}/>

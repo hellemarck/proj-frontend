@@ -12,6 +12,8 @@ class Home extends React.Component {
 
     componentDidMount() {
         const apiUrl = 'https://project.mh-jsramverk.me/';
+        // const apiUrl = 'http://localhost:3002/';
+
         fetch(apiUrl)
             .then((response) => response.json())
             .then(data => {

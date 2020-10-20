@@ -15,6 +15,7 @@ class Register extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         const apiUrl = 'https://project.mh-jsramverk.me/register/';
+        // const apiUrl = 'http://localhost:3002/register/';
 
         const user = {
             'email': this.state.email,
@@ -38,8 +39,8 @@ class Register extends React.Component {
 
     routeChange() {
         alert("Användare skapad");
-        let path = "/login";
-        this.props.history.push(path);
+        // let path = "/login";
+        // this.props.history.push(path);
     }
 
     handleInputChange = e => {

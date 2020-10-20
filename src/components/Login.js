@@ -22,6 +22,7 @@ class Login extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         const apiUrl = 'https://project.mh-jsramverk.me/login/';
+        // const apiUrl = 'http://localhost:3002/login/';
 
         const login = {
             'email': this.state.email,
@@ -37,10 +38,13 @@ class Login extends React.Component {
         })
         .then((response) => response.json())
         .then(data => {
+            console.log("häär");
             if (data.data) {
+                console.log("hit iaf");
+                console.log(data.data);
                 localStorage.setItem('token', data.data.token);
                 alert("Du är nu inloggad");
-                this.props.history.push("/reports/week/1");
+                this.props.history.push("/");
 
             } else {
                 alert("Fel användare eller lösenord, försök igen.");

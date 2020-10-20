@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Arapey&family=Gothic+A1&family=Meddon&family=Arvo&family=Cormorant+Garamond:wght@300&family=Cormorant+Infant:wght@300&family=Cormorant:wght@300&family=DM+Serif+Display&family=Oswald&family=DM+Serif+Text&family=Inria+Serif:wght@300&family=Old+Standard+TT&family=Oranienbaum&family=Playfair+Display&family=Prata&family=Rozha+One&family=Ultra&family=Vidaloka&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Ubuntu&family=Barlow&family=Roboto&family=Open+Sans&family=Shanti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Ubuntu&family=Barlow&family=Roboto&family=Open+Sans&family=Lobster&family=Poiret+One&family=Pompiere&family=Shanti&display=swap');
 
 html {
     background-color: #f7f4ed;
@@ -25,19 +25,40 @@ input {
     font-size:16px;
 }
 
+
+.posterBox {
+    border: 1px solid black;
+    margin: 10px auto;
+    width: 40%;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+@media (max-width: 900px) {
+    .posterBox {
+        width: 80%;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+.posterBox img {
+    width: 250px;
+}
+
 form textarea {
     min-height: 500px;
     min-width: 60%;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-      border-radius: 50%;
+      border-radius: 20%;
     /* animation: App-logo-spin infinite 40s linear; */
   }
 }
@@ -82,7 +103,9 @@ nav li {
 li a {
     color: black;
     font-family: "Playfair Display";
-    /* text-transform: uppercase; */
+    /* font-family: "Roboto";
+    font-weight: bold; */
+    text-transform: uppercase;
     text-decoration: none;
     font-size: 24px;
 }
