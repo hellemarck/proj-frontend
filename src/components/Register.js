@@ -39,8 +39,8 @@ class Register extends React.Component {
 
     routeChange() {
         alert("Användare skapad");
-        // let path = "/login";
-        // this.props.history.push(path);
+        let path = "/login";
+        this.props.history.push(path);
     }
 
     handleInputChange = e => {

@@ -38,14 +38,11 @@ class Login extends React.Component {
         })
         .then((response) => response.json())
         .then(data => {
-            console.log("häär");
             if (data.data) {
-                console.log("hit iaf");
-                console.log(data.data);
                 localStorage.setItem('token', data.data.token);
+                localStorage.setItem('user', data.data.userid);
                 alert("Du är nu inloggad");
-                this.props.history.push("/");
-
+                this.props.history.push("/mypage");
             } else {
                 alert("Fel användare eller lösenord, försök igen.");
             }

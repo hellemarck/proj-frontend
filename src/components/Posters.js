@@ -27,7 +27,7 @@ class Reports extends React.Component {
                 console.log(rows[0]);
                 this.setState({
                     posters: rows,
-                    description: "hellu"
+                    // description: "hellu"
                 });
             });
     }
@@ -45,7 +45,9 @@ class Reports extends React.Component {
                    <h3>{poster.title}</h3>
                    <img src={require(`./img/${poster.image}`)} alt={"bild"} />
                    <p>{poster.description}</p>
-                   </div>
+                   <p><b>Utgångspris: {poster.price} kr</b></p><br/>
+                   <a href={"/view/" + poster.id} className="button">Följ värdeutveckling</a>
+                   <br/><br/><br/></div>
                ))}
             </article>
             </div>

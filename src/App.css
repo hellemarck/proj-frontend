@@ -32,6 +32,7 @@ input {
     width: 40%;
     display: inline-block;
     margin-right: 20px;
+    vertical-align: top;
 }
 
 @media (max-width: 900px) {
@@ -102,12 +103,12 @@ nav li {
 
 li a {
     color: black;
-    font-family: "Playfair Display";
-    /* font-family: "Roboto";
-    font-weight: bold; */
+    /* font-family: "Playfair Display"; */
+    font-family: "Roboto";
+    font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 li a:hover {
@@ -124,7 +125,8 @@ li a:hover {
     width: 50%;
     margin: 20px auto;
     color: #727468;
-    font-family: "Barlow";
+    font-family: "Roboto";
+    /* font-family: "Barlow"; */
 }
 
 .article-standard a {
