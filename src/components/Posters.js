@@ -1,17 +1,11 @@
 import React from 'react';
-// import poster1 from './img/poster1.jpg'
-const poster = require('./img/poster1.jpg');
-console.log(poster);
 
 
-class Reports extends React.Component {
+class Posters extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            // title: null,
-            // image: null,
-            // description: "hej",
             posters: [],
         };
     }
@@ -27,12 +21,10 @@ class Reports extends React.Component {
                 console.log(rows[0]);
                 this.setState({
                     posters: rows,
-                    // description: "hellu"
                 });
             });
     }
 
-    // <a href={"/buy/" + id} className="button">Investera</a>
     render() {
         return (
             <div className="App">
@@ -55,9 +47,4 @@ class Reports extends React.Component {
     }
 }
 
-
-// ALT2 - ARROW FUNCTIONS:
-// const Reports = () => <article className="article-standard"><p>hejsaaan</p></article>
-
-// exporting as default allows us to import with any name in App.js
-export default Reports;
+export default Posters;

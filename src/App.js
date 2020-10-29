@@ -14,7 +14,6 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Register from './components/Register';
 import Login from './components/Login';
-import Chat from './components/Chat';
 import Posters from './components/Posters';
 import View from './components/View';
 import MyPage from './components/MyPage';
@@ -33,16 +32,13 @@ function App() {
               <Link to="/posters">> posters</Link>
             </li>
             <li>
-              <Link to="/login">> logga in/ut</Link>
+              <Link to="/login">> logga in</Link>
             </li>
             <li>
               <Link to="/register">> skapa användare</Link>
             </li>
             <li>
               <Link to="/mypage">> min sida</Link>
-            </li>
-            <li>
-              <Link to="/chat">> chatt</Link>
             </li>
           </ul>
         </nav>
@@ -57,7 +53,6 @@ function App() {
           <Route exact strict path="/posters" component={Posters}/>
           <Route exact strict path="/login" component={Login}/>
           <Route exact strict path="/register" component={Register}/>
-          <Route exact strict path="/chat" component={Chat}/>
           <Route exact strict path="/view/:id" component={View}/>
           <Route exact strict path="/mypage" component={MyPage}/>
         </Switch>

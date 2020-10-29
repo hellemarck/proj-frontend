@@ -3,25 +3,6 @@
 import React from 'react';
 
 
-// class Header extends Component {
-//     render() {
-//         return <header className="App-header">
-//         <p><i>En sida byggd i React för kursen jsramverk, BTH.</i></p>
-//           <img src={require('././img/me.jpg')} className="App-logo" alt="mette" />
-//           <p>
-//             Hej hopp, Mette heter jag!
-//           </p>
-//         </header>
-//     }
-// }
-
-// Arapey
-// Oswald
-// Prata
-// Vidaloka
-// Lobster
-// Poiret One
-
 const Header = () => {
     return React.createElement(
         'header',
@@ -30,7 +11,7 @@ const Header = () => {
         React.createElement('img', {
             className: 'App-logo',
             src: require('./img/poster4.jpg'),
-            alt: 'mette'
+            alt: 'poster4'
         }),
         React.createElement('p', {style: {fontSize:'36px', fontFamily:'Lobster'}}, 'the POSTER | BANK')
     )

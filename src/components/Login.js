@@ -3,10 +3,6 @@ import React from 'react';
 function logOut() {
     localStorage.clear();
     alert("Du har loggats ut")
-
-    // var article = document.getElementByClassName("article-standard");
-    // var loggedOutText = document.createTextNode("Du har loggats ut.");
-    // article.appendChild(loggedOutText);
 }
 
 class Login extends React.Component {
@@ -22,7 +18,6 @@ class Login extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         const apiUrl = 'https://project.mh-jsramverk.me/login/';
-        // const apiUrl = 'http://localhost:3002/login/';
 
         const login = {
             'email': this.state.email,
@@ -63,7 +58,8 @@ class Login extends React.Component {
             <div className="App">
 
               <article className="article-standard">
-              <h3>Logga in</h3>
+              <h2>LOGGA IN</h2>
+              <div style={{borderRadius: "20px", backgroundColor: "white", width: "60%", margin: "auto", padding: "10px"}}>
                   <form onSubmit={this.onSubmit}>
                       <p>E-post:</p>
                       <input type='text' name='email' required onChange={this.handleInputChange}/>
@@ -71,8 +67,11 @@ class Login extends React.Component {
                       <input type='password' name='pw' required onChange={this.handleInputChange}/>
                       <br/><br/><br/>
                       <input className='button' type='submit' value='Logga in'/>
-                  </form><br/><br/>
+                  <br/><br/>
+                  </form>
                   <input className='button' type='submit' value='Logga ut' onClick={logOut}/>
+                  <br/><br/>
+                  </div>
               </article>
             </div>
         );

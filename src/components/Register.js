@@ -5,7 +5,6 @@ class Register extends React.Component {
         super(props)
         this.routeChange = this.routeChange.bind(this);
 
-
         this.state = {
             email: "",
             pw: ""
@@ -15,7 +14,6 @@ class Register extends React.Component {
     onSubmit = (e) => {
         e.preventDefault();
         const apiUrl = 'https://project.mh-jsramverk.me/register/';
-        // const apiUrl = 'http://localhost:3002/register/';
 
         const user = {
             'email': this.state.email,
@@ -57,14 +55,16 @@ class Register extends React.Component {
           <div className="App">
 
             <article className="article-standard">
-                <h3>Registrera ny användare</h3>
-                    <form onSubmit={this.onSubmit}>
+                <h2>REGISTRERA NY ANVÄNDARE</h2>
+                <p><i>Alla nya användare får 100 kr att handla för!</i></p>
+                    <form onSubmit={this.onSubmit} style={{borderRadius: "20px", backgroundColor: "white", width: "60%", margin: "auto", padding: "10px"}}>
                         <p>E-post:</p>
                         <input type='text' name='email' required onChange={this.handleInputChange}/>
                         <p>Lösenord:</p>
                         <input type='password' name='pw' required onChange={this.handleInputChange}/>
-                        <br/><br/><br/>
+                        <br/><br/>
                         <input className='button' type='submit' value='Registrera'/>
+                        <br/><br/>
                     </form>
             </article>
           </div>
