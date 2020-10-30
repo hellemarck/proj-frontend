@@ -8,20 +8,16 @@
     "@testing-library/user-event": "^7.2.1",
     "chart.js": "^2.9.4",
     "chartjs-plugin-streaming": "^1.8.0",
-    "chromedriver": "^85.0.1",
-    "geckodriver": "^1.20.0",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.10.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "selenium-webdriver": "^3.6.0",
     "socket.io-client": "^2.3.1"
   },
   "scripts": {
     "start": "PORT=3003 react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha test/*.js",
     "eject": "react-scripts eject",
     "deploy": "npm run build && rsync -av build/* deploy@posters.mh-jsramverk.me:/var/www/posters.mh-jsramverk.me/html/"
   },
@@ -41,10 +37,6 @@
     ]
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "eslint": "^6.6.0",
-    "eslint-plugin-react": "^7.21.2",
     "javascript-style-guide": "^1.0.1"
   }
 }

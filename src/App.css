@@ -15,6 +15,12 @@ input {
     width: 200px;
 }
 
+.article-standard .welcome {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
 .button {
     color: #828FAB;
     background-color: #e7dece;

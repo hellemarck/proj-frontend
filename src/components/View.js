@@ -181,11 +181,12 @@ class View extends React.Component {
             .then(data => {
                 console.log(data);
                 if (data.errors) {
-                    console.log(data.errors)
+                    console.log(data.errors);
+                    this.routeChange();
                 }
             })
         }
-        this.routeChange();
+        // this.routeChange();
     }
 
     onSellSubmit = (e) => {
@@ -196,7 +197,7 @@ class View extends React.Component {
         e.preventDefault();
 
         const sell = {
-            'deposit': currentValue,
+            'deposit': this.state.userStock * currentValue,
             'id': localStorage.getItem('user')
         }
 
@@ -237,6 +238,7 @@ class View extends React.Component {
             console.log(data);
             if (data.errors) {
                 console.log(data.errors)
+                this.routeChange();
             } else {
                 alert("Försäljning genomförd");
                 window.location.reload(false);
@@ -253,7 +255,7 @@ class View extends React.Component {
     }
 
     routeChange() {
-        let path = "/mypage";
+        let path = "/login";
         this.props.history.push(path);
     }
 
