@@ -35,7 +35,7 @@ class MyPage extends React.Component {
                     .then(data => {
                         data.map(row => {
                             if (row.event == "Bought") {
-                                console.log(row);
+                                // console.log(row);
                                 this.setState(prevState => ({
                                     buys: [...prevState.buys, row]
                                 }))
